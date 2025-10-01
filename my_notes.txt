@@ -1,0 +1,3 @@
+Primera nota: Estoy aprendiendo a trabajar con archivos en Python.
+Segunda nota: Es importante cerrar siempre los archivos después de usarlos.
+Tercera nota: La práctica constante ayuda a mejorar las habilidades de programación.
