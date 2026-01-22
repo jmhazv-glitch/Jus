@@ -1,0 +1,4 @@
+Hola, este es un mensaje de prueba.
+Demostración de constructores y destructores en Python.
+Hola, este es un mensaje de prueba.
+Demostracion de constructores y destructores en Python.
