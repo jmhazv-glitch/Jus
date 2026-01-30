@@ -2,7 +2,7 @@
 
 informacion_personal = {
     "nombre": "Justyn Mateo Haz Vera",
-    "edad": 19,
+    "edad": 20,
     "ciudad": "Esmeraldas",
     "sexo": "Masculino",
     "profesion": "Estudiante"
