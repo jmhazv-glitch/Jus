@@ -1,25 +1,54 @@
 import threading
 import time
+from typing import List
 
 # Función que simula una tarea para un hilo
-def tarea_hilo(identificador, delay):
-    for i in range(5):
+def tarea_hilo(identificador: int, delay: float, iteraciones: int = 5) -> None:
+    """
+    Ejecuta una tarea en un hilo separado.
+
+    Args:
+        identificador: ID único del hilo
+        delay: Tiempo de espera en segundos entre iteraciones
+        iteraciones: Número de iteraciones (por defecto 5)
+    """
+    for i in range(iteraciones):
         print(f'Hilo {identificador}: Realizando tarea {i}')
         time.sleep(delay)
+    print(f'Hilo {identificador}: Completado')
 
-# Crear instancias de hilos
-hilo1 = threading.Thread(target=tarea_hilo, args=(1, 1))
-hilo2 = threading.Thread(target=tarea_hilo, args=(2, 0.8))
-hilo3 = threading.Thread(target=tarea_hilo, args=(3, 1.2))
+def crear_y_ejecutar_hilos(hilos_config: List[tuple]) -> None:
+    """
+    Crea y ejecuta múltiples hilos de forma escalable.
 
-# Iniciar los hilos
-hilo1.start()
-hilo2.start()
-hilo3.start()
+    Args:
+        hilos_config: Lista de tuplas (identificador, delay)
+    """
+    hilos = []
 
-# Esperar a que todos los hilos terminen
-hilo1.join()
-hilo2.join()
-hilo3.join()
+    # Crear y iniciar hilos
+    for identificador, delay in hilos_config:
+        hilo = threading.Thread(
+            target=tarea_hilo,
+            args=(identificador, delay),
+            daemon=False  # Permite control explícito del ciclo de vida
+        )
+        hilos.append(hilo)
+        hilo.start()
 
-print('Programa principal: Todas las tareas han sido completadas.')
+    # Esperar a que todos los hilos terminen
+    for hilo in hilos:
+        hilo.join()
+
+    print('Programa principal: Todas las tareas han sido completadas.')
+
+if __name__ == '__main__':
+    # Configuración de hilos: (identificador, delay)
+    configuracion = [
+        (1, 1.0),
+        (2, 0.8),
+        (3, 1.2)
+    ]
+
+    crear_y_ejecutar_hilos(configuracion)
+
