@@ -4,26 +4,8 @@ Contiene la clase Producto que representa un artículo en el inventario.
 """
 
 class Producto:
-    """
-    Clase que representa un producto en el inventario.
-    
-    Atributos:
-        id (int): Identificador único del producto
-        nombre (str): Nombre del producto
-        cantidad (int): Cantidad disponible en stock
-        precio (float): Precio unitario del producto
-    """
     
     def __init__(self, id, nombre, cantidad, precio):
-        """
-        Constructor de la clase Producto.
-        
-        Args:
-            id (int): ID único del producto
-            nombre (str): Nombre descriptivo del producto
-            cantidad (int): Cantidad inicial en inventario
-            precio (float): Precio por unidad
-        """
         self.__id = id
         self.__nombre = nombre
         self.__cantidad = cantidad
@@ -100,3 +82,23 @@ class Producto:
             str: Representación del objeto Producto
         """
         return f"Producto(id={self.__id}, nombre='{self.__nombre}', cantidad={self.__cantidad}, precio={self.__precio})"
+
+    def to_line(self):
+
+        return f"{self.__id}|{self.__nombre}|{self.__cantidad}|{self.__precio}"
+
+    @staticmethod
+    def from_line(linea):
+        try:
+            partes = linea.strip().split('|')
+            if len(partes) != 4:
+                raise ValueError(f"Formato inválido: se esperaban 4 campos, se encontraron {len(partes)}")
+
+            id = int(partes[0])
+            nombre = partes[1]
+            cantidad = int(partes[2])
+            precio = float(partes[3])
+
+            return Producto(id, nombre, cantidad, precio)
+        except (ValueError, IndexError) as e:
+            raise ValueError(f"Error al parsear línea de producto: {e}")

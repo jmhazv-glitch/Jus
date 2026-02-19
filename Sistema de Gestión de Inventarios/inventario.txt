@@ -1,0 +1,24 @@
+# Archivo de Inventario - Sistema de Gestión de Inventarios
+# Formato: id|nombre|cantidad|precio
+# No editar manualmente este archivo
+#==================================================
+1|Laptop HP|10|899.99
+2|Mouse Logitech|50|25.5
+3|Teclado Mecánico|30|75.0
+4|Monitor Samsung 24"|15|199.99
+5|Webcam HD|20|45.0
+6|Impresora Epson|5|150.0
+7|Disco Duro Externo|25|120.0
+8|Memoria RAM 16GB|40|80.0
+9|Tarjeta Gráfica NVIDIA|10|300.0
+10|Fuente de Poder 650W|20|60.0
+11|Placa Base ASUS|15|200.0
+12|Procesador Intel i7|10|350.0
+13|Ventilador CPU|30|20.0
+14|Caja de PC|20|50.0
+15|Silla Gamer|10|150.0
+16|Escritorio de Oficina|5|250.0
+17|Auriculares Bluetooth|25|80.0
+18|Altavoces 2.1|15|60.0
+19|Router WiFi|20|70.0
+20|Switch de Red|10|40.0

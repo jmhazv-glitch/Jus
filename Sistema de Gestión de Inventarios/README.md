@@ -1,7 +1,9 @@
 # Sistema de Gestión de Inventarios
 
 ## Descripción
-Sistema de gestión de inventarios simple y eficiente para tiendas, desarrollado en Python. Permite administrar productos mediante operaciones CRUD (Crear, Leer, Actualizar, Eliminar) con una interfaz interactiva de consola.
+Sistema de gestión de inventarios simple y eficiente para tiendas, desarrollado en Python. 
+Permite administrar productos mediante operaciones CRUD (Crear, Leer, Actualizar, Eliminar) 
+con una interfaz interactiva de consola y **persistencia de datos en archivos**.
 
 ## Características
 
@@ -14,6 +16,9 @@ Sistema de gestión de inventarios simple y eficiente para tiendas, desarrollado
 - ✅ Estadísticas del inventario (valor total, productos más caros/baratos, etc.)
 - ✅ Validación de entradas del usuario
 - ✅ Interfaz amigable con emojis y formato claro
+- ✅ **Persistencia en archivos** - Los datos se guardan automáticamente
+- ✅ **Carga automática** - El inventario se recupera al iniciar el programa
+- ✅ **Manejo robusto de excepciones** - Errores de archivo manejados elegantemente
 
 ## Estructura del Proyecto
 
@@ -21,9 +26,10 @@ Sistema de gestión de inventarios simple y eficiente para tiendas, desarrollado
 inventario-sistema/
 │
 ├── producto.py          # Clase Producto con atributos y métodos
-├── inventario.py        # Clase Inventario para gestión de productos
+├── inventario.py        # Clase Inventario para gestión de productos (con persistencia)
 ├── main.py             # Interfaz de usuario y menú interactivo
 ├── test_sistema.py     # Pruebas automatizadas del sistema
+├── inventario.txt      # Archivo de datos (generado automáticamente)
 ├── README.md           # Documentación del proyecto
 ├── .gitignore          # Archivos a ignorar en Git
 └── requirements.txt    # Dependencias del proyecto
@@ -55,7 +61,7 @@ inventario-sistema/
 3. Hacer clic derecho en `main.py`
 4. Seleccionar `Run 'main'`
 
-##Guía de Uso
+## Guía de Uso
 
 ### Menú Principal
 
@@ -107,6 +113,7 @@ python test_sistema.py
 - **Python 3.x**: Lenguaje de programación principal
 - **POO (Programación Orientada a Objetos)**: Diseño modular con clases
 - **Encapsulamiento**: Atributos privados con getters y setters
+- **Manejo de Archivos**: Lectura/escritura con manejo de excepciones
 
 ## Características Técnicas
 
@@ -114,15 +121,52 @@ python test_sistema.py
 - Encapsulamiento de datos con atributos privados
 - Getters y setters para todos los atributos
 - Métodos `__str__` y `__repr__` para representación
+- **Método `to_line()`**: Serialización a formato de texto
+- **Método `from_line()`**: Deserialización desde texto (método estático)
 
 ### Clase Inventario
 - Gestión de lista de productos
 - Validación de IDs únicos
 - Búsqueda flexible (por ID y por nombre)
 - Cálculo de estadísticas
+- **Persistencia automática en archivo** (`inventario.txt`)
+- **Carga automática al iniciar**
+- **Manejo de excepciones** para operaciones de archivo
+
+### Manejo de Archivos y Excepciones
+
+El sistema implementa un robusto manejo de archivos:
+
+```python
+# Excepciones manejadas:
+- FileNotFoundError: El archivo no existe (se crea automáticamente)
+- PermissionError: Sin permisos de lectura/escritura
+- ValueError: Datos corruptos en el archivo
+- IOError: Errores generales de entrada/salida
+```
+
+**Formato del archivo `inventario.txt`:**
+```
+# Archivo de Inventario - Sistema de Gestión de Inventarios
+# Formato: id|nombre|cantidad|precio
+1|Laptop HP|10|899.99
+2|Mouse Logitech|50|25.50
+3|Teclado Mecánico|30|75.00
+```
 
 ### Validaciones
 - Verificación de tipos de datos
 - Validación de valores positivos
 - Prevención de IDs duplicados
 - Confirmación para operaciones críticas
+- **Validación de formato de archivo**
+- **Recuperación de líneas corruptas**
+
+## Pruebas de Archivos
+
+Las pruebas incluyen escenarios de:
+- ✅ Persistencia de datos entre sesiones
+- ✅ Archivo no existente (se crea automáticamente)
+- ✅ Archivo con datos corruptos (se ignoran líneas inválidas)
+- ✅ IDs duplicados en archivo (se usa el primero)
+- ✅ Recarga de inventario desde archivo
