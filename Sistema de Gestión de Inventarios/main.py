@@ -3,7 +3,7 @@ Módulo main.py
 Sistema de Gestión de Inventarios - Interfaz de Usuario
 Proporciona un menú interactivo en consola para gestionar el inventario.
 """
-
+    
 from producto import Producto
 from inventario import Inventario
 import os
