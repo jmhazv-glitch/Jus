@@ -1,54 +1,46 @@
-import threading
+import random
 import time
-from typing import List
 
-# Función que simula una tarea para un hilo
-def tarea_hilo(identificador: int, delay: float, iteraciones: int = 5) -> None:
-    """
-    Ejecuta una tarea en un hilo separado.
+class Memoria:
+    def __init__(self, tamanio):
+        self.tamanio = tamanio
+        self.memoria = [None] * tamanio
 
-    Args:
-        identificador: ID único del hilo
-        delay: Tiempo de espera en segundos entre iteraciones
-        iteraciones: Número de iteraciones (por defecto 5)
-    """
-    for i in range(iteraciones):
-        print(f'Hilo {identificador}: Realizando tarea {i}')
-        time.sleep(delay)
-    print(f'Hilo {identificador}: Completado')
+    def asignar(self, proceso, tamanio_requerido):
+        for i in range(self.tamanio - tamanio_requerido + 1):
+            if all(self.memoria[i + j] is None for j in range(tamanio_requerido)):
+                for j in range(tamanio_requerido):
+                    self.memoria[i + j] = proceso
+                print(f'Proceso {proceso} asigno {tamanio_requerido} bloques de memoria.')
+                return True
+        print(f'Proceso {proceso} no pudo asignar memoria.')
+        return False
 
-def crear_y_ejecutar_hilos(hilos_config: List[tuple]) -> None:
-    """
-    Crea y ejecuta múltiples hilos de forma escalable.
+    def liberar(self, proceso):
+        for i in range(self.tamanio):
+            if self.memoria[i] == proceso:
+                self.memoria[i] = None
+        print(f'Proceso {proceso} ha liberado su memoria.')
 
-    Args:
-        hilos_config: Lista de tuplas (identificador, delay)
-    """
-    hilos = []
+    def mostrar_memoria(self):
+        print('Estado actual de la memoria:')
+        print(self.memoria)
 
-    # Crear y iniciar hilos
-    for identificador, delay in hilos_config:
-        hilo = threading.Thread(
-            target=tarea_hilo,
-            args=(identificador, delay),
-            daemon=False  # Permite control explícito del ciclo de vida
-        )
-        hilos.append(hilo)
-        hilo.start()
+def proceso(nombre, memoria):
+    tamanio_requerido = random.randint(1, 5)
+    print(f'{nombre} esta pidiendo {tamanio_requerido} bloques de memoria.')
+    if memoria.asignar(nombre, tamanio_requerido):
+        time.sleep(random.randint(1, 3))
+        memoria.liberar(nombre)
+    time.sleep(random.randint(1, 2))
 
-    # Esperar a que todos los hilos terminen
-    for hilo in hilos:
-        hilo.join()
-
-    print('Programa principal: Todas las tareas han sido completadas.')
+def gestionar_memoria():
+    memoria = Memoria(10)
+    procesos = ['Proceso-A', 'Proceso-B', 'Proceso-C', 'Proceso-D', 'Proceso-E']
+    for i in range(5):
+        proceso_nombre = random.choice(procesos)
+        proceso(proceso_nombre, memoria)
+    memoria.mostrar_memoria()
 
 if __name__ == '__main__':
-    # Configuración de hilos: (identificador, delay)
-    configuracion = [
-        (1, 1.0),
-        (2, 0.8),
-        (3, 1.2)
-    ]
-
-    crear_y_ejecutar_hilos(configuracion)
-
+    gestionar_memoria()
