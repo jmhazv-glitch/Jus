@@ -1,0 +1,15 @@
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\bin\Debug\net9.0\prueba1.exe
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\bin\Debug\net9.0\prueba1.deps.json
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\bin\Debug\net9.0\prueba1.runtimeconfig.json
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\bin\Debug\net9.0\prueba1.dll
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\bin\Debug\net9.0\prueba1.pdb
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.AssemblyInfoInputs.cache
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.AssemblyInfo.cs
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.csproj.CoreCompileInputs.cache
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.sourcelink.json
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.dll
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\refint\prueba1.dll
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.pdb
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\prueba1.genruntimeconfig.cache
+C:\Users\xJhaz\Documents\VS\Jus\C#\prueba1\obj\Debug\net9.0\ref\prueba1.dll
