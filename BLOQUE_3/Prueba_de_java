@@ -1,0 +1,28 @@
+/**
+ * Demostración técnica de Tipos de Datos en Java
+ */
+public class Main {
+    public static void main(String[] args) {
+        // 1. Enteros (Límites rígidos en memoria)
+        int unidadesInventario = 2147483647; // Valor máximo para un int de 32 bits
+        long inventarioExtremo = 450000000000L; // Requiere el sufijo 'L' para indicar 64 bits
+        
+        // 2. Punto flotante
+        float tasaFlotanteSimple = 0.00057412f; // Precisión simple de 32 bits (requiere 'f')
+        double tasaInteresDiaria = 0.00057412;  // Precisión doble de 64 bits (estándar)
+
+        // 3. Booleano primitivo
+        boolean operacionActiva = true;
+
+        // 4. Cadena de texto (Objeto de la clase String)
+        String nombreEstudiante = "Justyn";
+
+        // Salida estándar por consola
+        System.out.println("Estudiante: " + nombreEstudiante + " | Unidades: " + unidadesInventario);
+        System.out.println("Tasa Double: " + tasaInteresDiaria + " | Estado: " + operacionActiva);
+
+        // Intento de mutación de tipo (Si se desmarca, el compilador arrojará un error inmediato):
+        // int controlSistema = 100;
+        // controlSistema = "Activo"; // Error: Incompatible types: String cannot be converted to int
+    }
+}
