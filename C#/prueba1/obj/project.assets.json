@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xJhaz\\Documents\\VS\\Jus\\C#\\prueba1\\prueba1.csproj",
+      "projectUniqueName": "C:\\Users\\xJhaz\\Documents\\VS\\Jus\\Jus\\C#\\prueba1\\prueba1.csproj",
       "projectName": "prueba1",
-      "projectPath": "C:\\Users\\xJhaz\\Documents\\VS\\Jus\\C#\\prueba1\\prueba1.csproj",
+      "projectPath": "C:\\Users\\xJhaz\\Documents\\VS\\Jus\\Jus\\C#\\prueba1\\prueba1.csproj",
       "packagesPath": "C:\\Users\\xJhaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xJhaz\\Documents\\VS\\Jus\\C#\\prueba1\\obj\\",
+      "outputPath": "C:\\Users\\xJhaz\\Documents\\VS\\Jus\\Jus\\C#\\prueba1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xJhaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
