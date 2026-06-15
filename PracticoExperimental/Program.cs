@@ -69,22 +69,20 @@ namespace PracticaEstructuras
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("===============================================================================");
             Console.WriteLine("                       REPORTE GENERAL DE APORTES                              ");
             Console.WriteLine("===============================================================================");
             Console.ResetColor();
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine($"{"ID",-5} | {"Nombre",-15} | {"Ene",-8} | {"Feb",-8} | {"Mar",-8} | {"TOTAL",-10}");
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.ResetColor();
 
             if (empleadosRegistrados == 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("                    No hay empleados registrados aún.                          ");
                 Console.ResetColor();
-                Console.WriteLine("===============================================================================\n");
                 return;
             }
 
@@ -106,7 +104,7 @@ namespace PracticaEstructuras
                 fila += $" | {total,10:C2}";
                 Console.WriteLine(fila);
             }
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("===============================================================================\n");
             Console.ResetColor();
         }
@@ -123,9 +121,7 @@ namespace PracticaEstructuras
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                Console.WriteLine("****************************************************");
-                Console.WriteLine("*    SISTEMA DE APORTES - ASOCIACIÓN DE EMPLEADOS  *");
-                Console.WriteLine("****************************************************");
+                Console.WriteLine("     SISTEMA DE APORTES - ASOCIACIÓN DE EMPLEADOS   ");
                 Console.ResetColor();
                 Console.WriteLine("1. Registrar Empleado");
                 Console.WriteLine("2. Registrar Aporte mensual");
