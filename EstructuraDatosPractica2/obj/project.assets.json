@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/xjhaz/Documents/VS/Jus/PracticoExperimental/PracticaEstructuras.csproj",
-      "projectName": "PracticaEstructuras",
-      "projectPath": "/home/xjhaz/Documents/VS/Jus/PracticoExperimental/PracticaEstructuras.csproj",
+      "projectUniqueName": "/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/EstructuraDatosPractica2.csproj",
+      "projectName": "EstructuraDatosPractica2",
+      "projectPath": "/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/EstructuraDatosPractica2.csproj",
       "packagesPath": "/home/xjhaz/.nuget/packages/",
-      "outputPath": "/home/xjhaz/Documents/VS/Jus/PracticoExperimental/obj/",
+      "outputPath": "/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/xjhaz/.nuget/NuGet/NuGet.Config"

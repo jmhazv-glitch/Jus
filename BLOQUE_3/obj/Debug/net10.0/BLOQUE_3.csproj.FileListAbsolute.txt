@@ -1,0 +1,15 @@
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/bin/Debug/net10.0/BLOQUE_3
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/bin/Debug/net10.0/BLOQUE_3.deps.json
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/bin/Debug/net10.0/BLOQUE_3.runtimeconfig.json
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/bin/Debug/net10.0/BLOQUE_3.dll
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/bin/Debug/net10.0/BLOQUE_3.pdb
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.GeneratedMSBuildEditorConfig.editorconfig
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.AssemblyInfoInputs.cache
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.AssemblyInfo.cs
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.csproj.CoreCompileInputs.cache
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.sourcelink.json
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.dll
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/refint/BLOQUE_3.dll
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.pdb
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/BLOQUE_3.genruntimeconfig.cache
+/home/xjhaz/Documents/VS/Jus/BLOQUE_3/obj/Debug/net10.0/ref/BLOQUE_3.dll

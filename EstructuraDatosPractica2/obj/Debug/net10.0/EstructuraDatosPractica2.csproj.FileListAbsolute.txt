@@ -1,0 +1,15 @@
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.GeneratedMSBuildEditorConfig.editorconfig
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.AssemblyInfoInputs.cache
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.AssemblyInfo.cs
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.csproj.CoreCompileInputs.cache
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.sourcelink.json
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/bin/Debug/net10.0/EstructuraDatosPractica2
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/bin/Debug/net10.0/EstructuraDatosPractica2.deps.json
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/bin/Debug/net10.0/EstructuraDatosPractica2.runtimeconfig.json
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/bin/Debug/net10.0/EstructuraDatosPractica2.dll
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/bin/Debug/net10.0/EstructuraDatosPractica2.pdb
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.dll
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/refint/EstructuraDatosPractica2.dll
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.pdb
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/EstructuraDatosPractica2.genruntimeconfig.cache
+/home/xjhaz/Documents/VS/Jus/EstructuraDatosPractica2/obj/Debug/net10.0/ref/EstructuraDatosPractica2.dll
