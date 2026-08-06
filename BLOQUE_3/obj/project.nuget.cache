@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EEMS81aqq2o=",
+  "dgSpecHash": "PGqhpOZdOgo=",
   "success": true,
-  "projectFilePath": "/home/xjhaz/Documents/VS/Jus/BLOQUE_3/BLOQUE_3.csproj",
+  "projectFilePath": "/home/xjhaz/Repo/Jus/BLOQUE_3/BLOQUE_3.csproj",
   "expectedPackageFiles": [
-    "/home/xjhaz/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.9/microsoft.aspnetcore.app.ref.10.0.9.nupkg.sha512"
+    "/home/xjhaz/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.10/microsoft.aspnetcore.app.ref.10.0.10.nupkg.sha512"
   ],
   "logs": []
 }

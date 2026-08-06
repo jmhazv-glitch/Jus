@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zs4o6G59LDA=",
+  "success": true,
+  "projectFilePath": "/home/xjhaz/Repo/Jus/Practica/Practica.csproj",
+  "expectedPackageFiles": [
+    "/home/xjhaz/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.10/microsoft.aspnetcore.app.ref.10.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
