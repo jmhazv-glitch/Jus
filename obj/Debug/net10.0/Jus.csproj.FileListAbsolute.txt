@@ -1,5 +1,0 @@
-/home/xjhaz/Repo/Jus/obj/Debug/net10.0/Jus.GeneratedMSBuildEditorConfig.editorconfig
-/home/xjhaz/Repo/Jus/obj/Debug/net10.0/Jus.AssemblyInfoInputs.cache
-/home/xjhaz/Repo/Jus/obj/Debug/net10.0/Jus.AssemblyInfo.cs
-/home/xjhaz/Repo/Jus/obj/Debug/net10.0/Jus.csproj.CoreCompileInputs.cache
-/home/xjhaz/Repo/Jus/obj/Debug/net10.0/Jus.sourcelink.json
