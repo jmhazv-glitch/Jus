@@ -5,7 +5,9 @@ namespace RegistroBiblioteca;
 
 public class GestorBiblioteca
 {
-    private List<Libro> _catalogo = new();
+    private Dictionary<string, Libro> _catalogo = new Dictionary<string, Libro>(StringComparer.OrdinalIgnoreCase);
+    
+    private HashSet<string> _autoresUnicos = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
     
     private const string ArchivoDatos = "libros_guardados.json";
 
@@ -16,20 +18,23 @@ public class GestorBiblioteca
 
     public void RegistrarLibro(Libro libro)
     {
-        if (_catalogo.Exists(l => l.ISBN == libro.ISBN))
+        if (_catalogo.ContainsKey(libro.ISBN))
         {
             Console.WriteLine($"\nError: Ya existe un libro con el ISBN {libro.ISBN}.");
             return;
         }
 
-        _catalogo.Add(libro);
+        _catalogo.Add(libro.ISBN, libro);
+        
+        _autoresUnicos.Add(libro.Autor);
+        
         GuardarDatos(); 
         Console.WriteLine("\n¡Libro registrado y guardado con éxito!");
     }
 
     public Libro? BuscarPorISBN(string isbn)
     {
-        return _catalogo.FirstOrDefault(l => l.ISBN.Equals(isbn, StringComparison.OrdinalIgnoreCase));
+        return _catalogo.GetValueOrDefault(isbn);
     }
 
     public void PrestarLibro(string isbn)
@@ -69,7 +74,7 @@ public class GestorBiblioteca
 
         libro.Disponible = true; 
         GuardarDatos(); 
-        Console.WriteLine($"\n¡Exito! El libro '{libro.Titulo}' ha sido devuelto y está disponible.");
+        Console.WriteLine($"\n¡Éxito! El libro '{libro.Titulo}' ha sido devuelto y está disponible.");
     }
 
     public void ListarLibros()
@@ -81,13 +86,19 @@ public class GestorBiblioteca
         }
 
         Console.WriteLine("\n--- CATÁLOGO DE LA BIBLIOTECA ---");
-        foreach (var libro in _catalogo)
+        // CORRECCIÓN: Para imprimir desde un diccionario, recorremos sus Valores (.Values)
+        foreach (var libro in _catalogo.Values)
         {
             Console.WriteLine(libro);
         }
+
+        Console.WriteLine("\n--- AUTORES REGISTRADOS (CONJUNTO) ---");
+        foreach (var autor in _autoresUnicos)
+        {
+            Console.WriteLine($"- {autor}");
+        }
     }
 
-           //seccion para gurdasr los datos y que no se pierdan 
     private void GuardarDatos()
     {
         var opciones = new JsonSerializerOptions { WriteIndented = true };
@@ -101,11 +112,17 @@ public class GestorBiblioteca
         if (File.Exists(ArchivoDatos))
         {
             string json = File.ReadAllText(ArchivoDatos);
-            var datosRecuperados = JsonSerializer.Deserialize<List<Libro>>(json);
+            
+            var datosRecuperados = JsonSerializer.Deserialize<Dictionary<string, Libro>>(json);
             
             if (datosRecuperados != null)
             {
                 _catalogo = datosRecuperados;
+                
+                foreach (var libro in _catalogo.Values)
+                {
+                    _autoresUnicos.Add(libro.Autor);
+                }
             }
         }
     }
