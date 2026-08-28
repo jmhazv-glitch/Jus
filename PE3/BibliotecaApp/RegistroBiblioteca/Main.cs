@@ -13,7 +13,7 @@ while (!salir)
     Console.WriteLine("5. Devolver un libro");
     Console.WriteLine("6. Salir");
     Console.Write("Seleccione una opción: ");
-
+       // seccin de busque de libro y agregar libros
     string? opcion = Console.ReadLine();
 
     switch (opcion)
@@ -46,7 +46,7 @@ while (!salir)
             else
                 Console.WriteLine("\nNo se encontró ningún libro con ese ISBN.");
             break;
-
+            // seccion para prestar o devolver un libro
         case "4":
             Console.Write("Ingrese el ISBN del libro que desea PRESTAR: ");
             string isbnPrestar = Console.ReadLine() ?? "";

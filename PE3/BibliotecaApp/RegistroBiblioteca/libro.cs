@@ -1,5 +1,5 @@
 namespace RegistroBiblioteca;
-
+// seccion de libro 
 public class Libro
 {
     public string ISBN { get; set; } = string.Empty;

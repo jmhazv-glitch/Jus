@@ -69,7 +69,7 @@ public class GestorBiblioteca
 
         libro.Disponible = true; 
         GuardarDatos(); 
-        Console.WriteLine($"\n¡Éxito! El libro '{libro.Titulo}' ha sido devuelto y está disponible.");
+        Console.WriteLine($"\n¡Exito! El libro '{libro.Titulo}' ha sido devuelto y está disponible.");
     }
 
     public void ListarLibros()
@@ -79,7 +79,7 @@ public class GestorBiblioteca
             Console.WriteLine("\nNo hay libros registrados en la biblioteca.");
             return;
         }
-        
+
         Console.WriteLine("\n--- CATÁLOGO DE LA BIBLIOTECA ---");
         foreach (var libro in _catalogo)
         {
@@ -87,7 +87,7 @@ public class GestorBiblioteca
         }
     }
 
-           //datos y guardado
+           //seccion para gurdasr los datos y que no se pierdan 
     private void GuardarDatos()
     {
         var opciones = new JsonSerializerOptions { WriteIndented = true };
